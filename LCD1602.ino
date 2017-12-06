@@ -65,50 +65,6 @@ void loop()
       
   }
 
-/*
-  // Turn on the display:
-  if (1 == 1){
-  lcd.display();
-    delay(250);
-   lcd.setCursor(8, 0);
-  lcd.print(random(10));
-  delay(1000);
-  }
-  else{
-    
- */
-
-/*
- *  for (int x ; x <100; x--) {
- *  digitalWrite(led,HIGH);
-              delay(x);
-       digitalWrite(led,LOW);
-
- */
-  
-
-  
-  
-  
- 
- 
- 
-
-
- /*
-  * 
-  * 
- if (buttonState == HIGH) 
- { 
-  * else { 
-     lcd.setCursor(10, 1);
-    lcd.print("Aww Shucks");
-    delay(250);
-    
- }
- 
- 
-  */
  
 
 
