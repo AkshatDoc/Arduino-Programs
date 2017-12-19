@@ -2,7 +2,7 @@
  * Akshat Doctor
  * 2017-12-07
  * This progranm first prints the the number/command from hex to ASCII  
- * Buttons 1 - 4 control one LED to turn it on and off
+ * Buttons 1 - 4 on the IR Remote control one LED to turn it on and off
  * Tech Help akshatdr@gmail.com 
  * This uses LCD 1602 and IR sensors
  */
@@ -10,8 +10,7 @@
 #include <IRremote.h>//IR lib
 #include <LiquidCrystal.h>//LCD1602 lib
 
-int pinArray[] = {8,9,10,13};//LED pins
-int count = 0;
+int pinArray[] = {8,9,10,7};//LED pins
 int timer = 500;
 const int RECV_PIN = 2;//IR connected to pin on Arduino
 LiquidCrystal lcd(12, 11, 6, 5, 4, 3);//LCD pins
@@ -29,7 +28,7 @@ void setup(){
 void loop(){
   if (irrecv.decode(&results)){ //Prints the name of the buttons
  
-        if (results.value == 0XFFFFFFFF)
+        if (results.value == 0XFFFFFF)
         results.value = key_value;
         lcd.setCursor(0, 0);
         lcd.clear();
@@ -108,34 +107,43 @@ void loop(){
         key_value = results.value;
         irrecv.resume(); 
   }
-
   if (results.value == 0xFFA25D){//FOr LED1
-    digitalWrite(pinArray[count],HIGH);
+    digitalWrite(pinArray[0],HIGH);
     delay(timer);
-    digitalWrite(pinArray[count],LOW);
+    digitalWrite(pinArray[0],LOW);
     delay(timer);
   }
+
+
+
 
   if (results.value == 0xFF629D){ //For LED2
-    digitalWrite(pinArray[count+1],HIGH);
+    digitalWrite(pinArray[1],HIGH);
     delay(timer);
-    digitalWrite(pinArray[count+1],LOW);
+    digitalWrite(pinArray[1],LOW);
     delay(timer);
+  
    }
 
+
+
+
   if (results.value == 0xFFE21D){//For LED3
-    digitalWrite(pinArray[count+2],HIGH);
+    digitalWrite(pinArray[2],HIGH);
     delay(timer);
-    digitalWrite(pinArray[count+2],LOW);
+    digitalWrite(pinArray[2],LOW);
     delay(timer);
-  }
-     
+
+} 
+
+
   if (results.value == 0xFF22DD){ //For LED4
-    digitalWrite(pinArray[count+3],HIGH);
+    digitalWrite(pinArray[3],HIGH);
     delay(timer);
-    digitalWrite(pinArray[count+3],LOW);
+    digitalWrite(pinArray[3],LOW);
     delay(timer);
   }
+
 
 }
 

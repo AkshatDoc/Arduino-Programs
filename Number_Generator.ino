@@ -1,9 +1,7 @@
 /*
- * Author: SMRAZA KEEN
- * Date:2016/6/29
- * IDE V1.6.9
- * Email:TechnicSmraza@outlook.com
- * Function:
+ *Akshat Doctor
+ *2017/12/18
+ *This program takes an LCD screen and button, and then generates a random number from 1-100
  */
  
  int button= 7;
@@ -35,27 +33,13 @@ void loop()
       lcd.print("Number:");
       lcd.setCursor(8, 0);
       lcd.print(random(100));
-      delay(250);
-      
-      
+      delay(250);    
       buttonState = 0;
-
       delay(1000);
-
-      }
-     
-      
-
-    else{
-      
-
+    }
+    else{    
     lcd.print("No number for you!")
-        
-    
-      
-
-           buttonState = 0;
-    
+    buttonState = 0;
       }
 
 
@@ -64,52 +48,5 @@ void loop()
 
       
   }
-
-/*
-  // Turn on the display:
-  if (1 == 1){
-  lcd.display();
-    delay(250);
-   lcd.setCursor(8, 0);
-  lcd.print(random(10));
-  delay(1000);
-  }
-  else{
-    
- */
-
-/*
- *  for (int x ; x <100; x--) {
- *  digitalWrite(led,HIGH);
-              delay(x);
-       digitalWrite(led,LOW);
-
- */
-  
-
-  
-  
-  
- 
- 
- 
-
-
- /*
-  * 
-  * 
- if (buttonState == HIGH) 
- { 
-  * else { 
-     lcd.setCursor(10, 1);
-    lcd.print("Aww Shucks");
-    delay(250);
-    
- }
- 
- 
-  */
- 
-
 
 

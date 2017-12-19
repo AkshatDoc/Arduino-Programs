@@ -1,0 +1,13 @@
+int buzzer=13; 
+
+void setup() { 
+  pinMode(buzzer,OUTPUT); 
+  }
+  
+void loop() {
+  digitalWrite(buzzer, HIGH);
+  delay(1000);
+  digitalWrite(buzzer,LOW);// produce sound } 
+  delay(1000);
+}
+

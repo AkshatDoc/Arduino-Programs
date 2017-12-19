@@ -1,3 +1,10 @@
+/*
+ * Akshat Doctor
+ * 2017/12/18
+ * This program acts as a Tracer Light for 5 LED. It goes back and forth from the lights continously 
+ */
+
+
 int pinArray[] = {13, 12, 11, 10, 9};
 int count = 0;
 int timer = 300;
